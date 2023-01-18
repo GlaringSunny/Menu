@@ -1,0 +1,90 @@
+<div id="quiz">
+  <h1>Quiz</h1>
+  <form>
+    <p>What is the capital of France?</p>
+    <input type="radio" name="answer" value="Paris"> Paris<br>
+    <input type="radio" name="answer" value="London"> London<br>
+    <input type="radio" name="answer" value="Rome"> Rome<br>
+    <button onclick="checkAnswer()">Submit</button>
+  </form>
+  <p id="result"></p>
+</div>
+
+<style>
+/* Add a background image to the quiz container */
+#quiz {
+    background: linear-gradient(to bottom, #f7b733, #fc4a1a);
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Add a background color to the question text */
+#quiz p {
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* Add some padding and margin to the quiz container */
+#quiz {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Style the question text */
+#quiz p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Style the answer options */
+#quiz input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Style the submit button */
+#quiz button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the result text */
+#quiz #result {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* Style the correct answer */
+#quiz #result.correct {
+    color: green;
+}
+
+/* Style the incorrect answer */
+#quiz #result.incorrect {
+    color: red;
+}
+</style>
+
+<script>
+function checkAnswer() {
+  var answer = document.querySelector('input[name="answer"]:checked').value;
+  var resultEl = document.getElementById("result")
+  if (answer === "Paris") {
+    resultEl.innerHTML = "Correct!";
+    resultEl.classList.add("correct");
+  } else {
+    resultEl.innerHTML = "Incorrect. The capital of France is Paris.";
+    resultEl.classList.add("incorrect");
+  }
+}
+</script>
