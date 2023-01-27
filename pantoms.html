@@ -8,7 +8,18 @@
     <link rel="shortcut icon" href="https://phant0ms.netlify.app/images/blazer.png" type="image/x-icon">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
   </head>
-  <body style="overflow-y: visible;">
+  <body style="overflow-y: visible;" onload="recheck()">
+    <script>
+      function recheck() {
+  let input = prompt("password required", "");
+  if (input == "127127") {
+alert("User Verified");
+  } else {
+    alert("haiya no password");
+    window.location.replace("https://www.google.com");
+  }
+}
+    </script>
     <div id="navigation">
       <h1>Phantom <span>Games</span>
       </h1>
