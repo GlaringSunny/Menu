@@ -20,29 +20,10 @@ alert("User Verified");
   }
 }
     </script>
-    <div id="navigation">
-      <h1>Phantom <span>Games</span>
-      </h1>
-      <div class="search">
-        <input type="text" placeholder="Search" id="search" autocomplete="off" oninput="search()">
-        <button onclick="search()">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-      <div class="icons">
-        <div class="icon">
-          <i class="fa-regular fa-down-left-and-up-right-to-center" onclick="gamesPerspective()"></i>
-        </div>
-        <div class="icon">
-          <i class="fa-solid fa-clapperboard-play"></i>
-        </div>
-      </div>
-    </div>
     <div class="main" id="main">
-      <h1>Phantom <span>Games</span>
+      <h1>Game <span>Sake</span>
       </h1>
-      <p>"BlazerHM is just so cool!"</p>
-      <button id="start-button">Get Started</button>
+
     </div>
     <div id="game-frame" style="display: none;">
       <div class="controls">
@@ -54,16 +35,7 @@ alert("User Verified");
     <div id="error">No Games Found.</div>
     <div id="movies"></div>
     <div id="games">
-      <div class="game">
-        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/among-us.png) 0% 0% / cover;" onclick="play('Among Us', 'https://phant0ms.netlify.app/game/among-us')">
-          <div class="cover"></div>
-        </div>
-        <div id="game-content" class="game-content">
-          <h1>Among Us</h1>
-          <p>Crewmates work together to complete tasks before you as the imposter kill them.</p>
-          <button class="install" onclick="play('Among Us', 'https://phant0ms.netlify.app/game/among-us')">Play</button>
-        </div>
-      </div>
+      
       <div class="game">
         <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/slope.jpg) 0% 0% / cover;" onclick="play('Slope', 'https://phant0ms.netlify.app/game/slope')">
           <div class="cover"></div>
@@ -75,7 +47,7 @@ alert("User Verified");
         </div>
       </div>
       <div class="game">
-        <div class="img" loading="lazy" style="background: url(./assets/mc.png) 0% 0% / cover;" onclick="play('Minecraft', 'https://phant0ms.netlify.app/game/minecraft')">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/mc.png) 0% 0% / cover;" onclick="play('Minecraft', 'https://phant0ms.netlify.app/game/minecraft')">
           <div class="cover"></div>
         </div>
         <div id="game-content" class="game-content">
@@ -404,22 +376,7 @@ alert("User Verified");
           <button class="install" onclick="play('Geometrydash', 'https://phant0ms.netlify.app/game/geometry-dash-remastered')">Play</button>
         </div>
       </div>
-    <footer id="footer">
-      <main>
-        <hr>
-        <h1>Phantom <span>Games</span>
-        </h1>
-        <h2>Thanks <a href="https://3kh0.github.io">
-            <span class="one">3kh0</span>
-          </a> for lots of game help! </h2>
-        <h2>Subscribe to my <a href="https://youtube.com/@blazerhm">
-            <span class="two">YouTube</span>
-          </a>
-        </h2>
-        <p>© 2022 Phantom. All rights reserved.</p>
-        <p id="display"></p>
-      </main>
-    </footer>
+
     <script src="https://phant0ms.netlify.app/script.js"></script>
   </body>
 </html>
