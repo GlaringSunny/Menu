@@ -13,11 +13,16 @@
       function recheck() {
   let input = prompt("password required", "");
   if (input == "127127") {
-alert("User Verified");
+  alert("User Verified");
+  setTimeout(timer, 9000000);
   } else {
-    alert("haiya no password");
+    alert("Verification Failed!");
     window.location.replace("https://www.google.com");
   }
+}
+      function timer() {
+  alert('key expired!');
+  window.loation.replace("https://glaringsunny.github.io/Menu/expired.html");
 }
     </script>
     <div class="main" id="main">
