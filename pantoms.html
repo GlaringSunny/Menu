@@ -1,0 +1,414 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phantom</title>
+    <link rel="stylesheet" href="https://phant0ms.netlify.app/main.css">
+    <link rel="shortcut icon" href="https://phant0ms.netlify.app/images/blazer.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+  </head>
+  <body style="overflow-y: visible;">
+    <div id="navigation">
+      <h1>Phantom <span>Games</span>
+      </h1>
+      <div class="search">
+        <input type="text" placeholder="Search" id="search" autocomplete="off" oninput="search()">
+        <button onclick="search()">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <i class="fa-regular fa-down-left-and-up-right-to-center" onclick="gamesPerspective()"></i>
+        </div>
+        <div class="icon">
+          <i class="fa-solid fa-clapperboard-play"></i>
+        </div>
+      </div>
+    </div>
+    <div class="main" id="main">
+      <h1>Phantom <span>Games</span>
+      </h1>
+      <p>"BlazerHM is just so cool!"</p>
+      <button id="start-button">Get Started</button>
+    </div>
+    <div id="game-frame" style="display: none;">
+      <div class="controls">
+        <i class="fa-solid fa-circle-xmark" onclick="play()"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+      <iframe src="" id="iframe"></iframe>
+    </div>
+    <div id="error">No Games Found.</div>
+    <div id="movies"></div>
+    <div id="games">
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/among-us.png) 0% 0% / cover;" onclick="play('Among Us', 'https://phant0ms.netlify.app/game/among-us')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Among Us</h1>
+          <p>Crewmates work together to complete tasks before you as the imposter kill them.</p>
+          <button class="install" onclick="play('Among Us', 'https://phant0ms.netlify.app/game/among-us')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/slope.jpg) 0% 0% / cover;" onclick="play('Slope', 'https://phant0ms.netlify.app/game/slope')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Slope</h1>
+          <p>Speed down on a randomized slope. The farther you go, the faster your ball travels!</p>
+          <button class="install" onclick="play('Slope', 'https://phant0ms.netlify.app/game/slope')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(./assets/mc.png) 0% 0% / cover;" onclick="play('Minecraft', 'https://phant0ms.netlify.app/game/minecraft')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Minecraft</h1>
+          <p>Play single player Minecraft right from your browser!</p>
+          <button class="install" onclick="play('Minecraft', 'https://phant0ms.netlify.app/game/minecraft')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/temple-run.png) 0% 0% / cover;" onclick="play('Temple Run', 'https://phant0ms.netlify.app/game/temple-run')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Temple Run</h1>
+          <p>Test your reflexes as you race down ancient temple walls and along sheer cliffs.</p>
+          <button class="install" onclick="play('Temple Run', 'https://phant0ms.netlify.app/game/temple-run')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/krk.png) 0% 0% / cover;" onclick="play('Krunker', 'https://phant0ms.netlify.app/game/krunker')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Krunker</h1>
+          <p>Krunker.io is a fast-paced pixelated first-person shooter game.</p>
+          <button class="install" onclick="play('Krunker', 'https://phant0ms.netlify.app/game/krunker')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/subway-surfer.jpg) 0% 0% / cover;" onclick="play('Subway Surfers', 'https://phant0ms.netlify.app/game/subway-surfers')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Subway Surfers</h1>
+          <p>DASH as fast as you can! DODGE the oncoming trains!</p>
+          <button class="install" onclick="play('Subway Surfers', 'https://phant0ms.netlify.app/game/subway-surfers')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/vex7.jpeg) 0% 0% / cover;" onclick="play('Vex 7', 'https://phant0ms.netlify.app/game/vex7')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Vex 7</h1>
+          <p>Vex 7 is an awesome online game where you need to pass all the dangerous obstacles!</p>
+          <button class="install" onclick="play('Vex 7', 'https://phant0ms.netlify.app/game/vex7')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/vex6.jpeg) 0% 0% / cover;" onclick="play('Vex 6', 'https://phant0ms.netlify.app/game/vex6')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Vex 6</h1>
+          <p>Vex 6 is an awesome online game where you need to pass all the dangerous obstacles!</p>
+          <button class="install" onclick="play('Vex 6', 'https://phant0ms.netlify.app/game/vex6')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/vex5.jpg) 0% 0% / cover;" onclick="play('Vex 5', 'https://phant0ms.netlify.app/game/vex5')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Vex 5</h1>
+          <p>Vex 5 is an awesome online game where you need to pass all the dangerous obstacles!</p>
+          <button class="install" onclick="play('Vex 5', 'https://phant0ms.netlify.app/game/vex5')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/vex4.jpg) 0% 0% / cover;" onclick="play('Vex 4', 'https://phant0ms.netlify.app/game/vex4')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Vex 4</h1>
+          <p>Vex 4 is an awesome online game where you need to pass all the dangerous obstacles!</p>
+          <button class="install" onclick="play('Vex 4', 'https://phant0ms.netlify.app/game/vex4')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/vex3.jpg) 0% 0% / cover;" onclick="play('Vex 3', 'https://phant0ms.netlify.app/game/vex3')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Vex 3</h1>
+          <p>Vex 3 is an awesome online game where you need to pass all the dangerous obstacles!</p>
+          <button class="install" onclick="play('Vex 3', 'https://phant0ms.netlify.app/game/vex3')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/1v1-lol.jpg) 0% 0% / cover;" onclick="play('1v1.lol', 'https://phant0ms.netlify.app/game/1v1lol')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>1v1.lol</h1>
+          <p>The mission in this game is to eliminate the opponents and become the last survivor.</p>
+          <button class="install" onclick="play('1v1.lol', 'https://phant0ms.netlify.app/game/1v1lol')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/retro-bowl.jpg) 0% 0% / cover;" onclick="play('Retrobowl', 'https://phant0ms.netlify.app/game/retro-bowl')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Retrobowl</h1>
+          <p>Retro Bowl is an American style football game. Are you ready to manage your dream team into victory?</p>
+          <button class="install" onclick="play('Retrobowl', 'https://phant0ms.netlify.app/game/retro-bowl')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/moto-x3m.jpg) 0% 0% / cover;" onclick="play('Moto X3M', 'https://phant0ms.netlify.app/game/moto-x3m')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Moto X3M</h1>
+          <p>Use the arrow keys to accelerate, brake, or flip your bike. Make it through the course as quickly as possible.</p>
+          <button class="install" onclick="play('Moto X3M', 'https://phant0ms.netlify.app/game/moto-x3m')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/moto-spooky.jpg) 0% 0% / cover;" onclick="play('Moto X3M Spooky Land', 'https://phant0ms.netlify.app/game/moto-x3m-spooky-land')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Moto X3M Spooky Land</h1>
+          <p>Use the arrow keys to accelerate, brake, or flip your bike. Make it through the course as quickly as possible.</p>
+          <button class="install" onclick="play('Moto X3M Spooky Land', 'https://phant0ms.netlify.app/game/moto-x3m-spooky-land')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/moto-winter.jpg) 0% 0% / cover;" onclick="play('Moto X3M Winter', 'https://phant0ms.netlify.app/game/moto-x3m-winter')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Moto X3M Winter</h1>
+          <p>Use the arrow keys to accelerate, brake, or flip your bike. Make it through the course as quickly as possible.</p>
+          <button class="install" onclick="play('Moto X3M Winter', 'https://phant0ms.netlify.app/game/moto-x3m-winter')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/pool-party.png) 0% 0% / cover;" onclick="play('Moto X3M Pool Party', 'https://phant0ms.netlify.app/game/moto-x3m-pool-party')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Moto X3M Pool Party</h1>
+          <p>Use the arrow keys to accelerate, brake, or flip your bike. Make it through the course as quickly as possible.</p>
+          <button class="install" onclick="play('Moto X3M Pool Party', 'https://phant0ms.netlify.app/game/moto-x3m-pool-party')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/motox3m2.jpg) 0% 0% / cover;" onclick="play('Moto X3M 2', 'https://phant0ms.netlify.app/game/motox3m2')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Moto X3M 2</h1>
+          <p>Use the arrow keys to accelerate, brake, or flip your bike. Make it through the course as quickly as possible.</p>
+          <button class="install" onclick="play('Moto X3M 2', 'https://phant0ms.netlify.app/game/motox3m2')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/bob-the-robber-2.png) 0% 0% / cover;" onclick="play('Bob The Robber 2', 'https://phant0ms.netlify.app/game/bob-the-robber-2')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Bob The Robber 2</h1>
+          <p>Enter locations around the town and loot them, picking locks, avoiding traps, lasers, and guards in this cute action adventure.</p>
+          <button class="install" onclick="play('Bob The Robber 2', 'https://phant0ms.netlify.app/game/bob-the-robber-2')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/smash-karts.jpg) 0% 0% / cover;" onclick="play('Smash Karts', 'https://phant0ms.netlify.app/game/smashkarts')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Smash Karts</h1>
+          <p>Smash Karts is a free io Multiplayer Kart Battle Arena game. Drive fast. Fire rockets. Make big explosions.</p>
+          <button class="install" onclick="play('Smash Karts', 'https://phant0ms.netlify.app/game/smashkarts')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/drive-mad.jpg) 0% 0% / cover;" onclick="play('Drive Mad', 'https://phant0ms.netlify.app/game/drive-mad')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Drive Mad</h1>
+          <p>Drive Mad is a car game where you drive on a track filled with obstacles.</p>
+          <button class="install" onclick="play('Drive Mad', 'https://phant0ms.netlify.app/game/drive-mad')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/just-fall.jpg) 0% 0% / cover;" onclick="play('Just Fall', 'https://phant0ms.netlify.app/game/just-fall')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Just Fall</h1>
+          <p>Play the fun Fall Ultimate Knockout Guys game.</p>
+          <button class="install" onclick="play('Just Fall', 'https://phant0ms.netlify.app/game/just-fall')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/basketball-stars.jpg) 0% 0% / cover;" onclick="play('Basketball Stars', 'https://phant0ms.netlify.app/game/basketball-stars')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Basketball Stars</h1>
+          <p>Basketball Stars is a classic basketball themed game.</p>
+          <button class="install" onclick="play('Basketball Stars', 'https://phant0ms.netlify.app/game/basketball-stars')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/stickman-hook.jpg) 0% 0% / cover;" onclick="play('Stickman Hook', 'https://phant0ms.netlify.app/game/stickman-hook')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Stickman Hook</h1>
+          <p>Stickman Hook is a challenging skill game in which you must navigate a swinging stickman through hundreds of levels.</p>
+          <button class="install" onclick="play('Stickman Hook', 'https://phant0ms.netlify.app/game/stickman-hook')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/drifthunters.jpg) 0% 0% / cover;" onclick="play('Drift Hunters', 'https://phant0ms.netlify.app/game/drift-hunters')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Drift Hunters</h1>
+          <p>Drift Hunters is an awesome 3D car driving game in which you score points by drifting various cars.</p>
+          <button class="install" onclick="play('Drift Hunters', 'https://phant0ms.netlify.app/game/drift-hunters')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/getaway-shootout.jpg) 0% 0% / cover;" onclick="play('Getaway Shootout', 'https://phant0ms.netlify.app/game/getaway-shootout')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Getaway Shootout</h1>
+          <p>Getaway Shooter is a chaotic two-player game where you race three others to the extraction point.</p>
+          <button class="install" onclick="play('Getaway Shootout', 'https://phant0ms.netlify.app/game/getaway-shootout')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/tube-jumpers.png) 0% 0% / cover;" onclick="play('Tube Jumpers', 'https://phant0ms.netlify.app/game/tube-jumpers')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Tube Jumpers</h1>
+          <p>Tube Jumpers is local multiplayer game with your friends packed with action. The last one to stay on the tubes wins.</p>
+          <button class="install" onclick="play('Tube Jumpers', 'https://phant0ms.netlify.app/game/tube-jumpers')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/rooftopsnipers.jpg) 0% 0% / cover;" onclick="play('Rooftop Snipers', 'https://phant0ms.netlify.app/game/rooftop-snipers')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Rooftop Snipers</h1>
+          <p>Rooftop Snipers is a pixel-style shooting game where you have to shoot famous characters off of the roof.</p>
+          <button class="install" onclick="play('Rooftop Snipers', 'https://phant0ms.netlify.app/game/rooftop-snipers')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/ducklife.jpg) 0% 0% / cover;" onclick="play('Ducklife', 'https://phant0ms.netlify.app/game/ducklife')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Ducklife</h1>
+          <p>A pet raising simulation. Train a duckling to become a racing duck.</p>
+          <button class="install" onclick="play('Ducklife', 'https://phant0ms.netlify.app/game/ducklife')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/cookie-clicker.png) 0% 0% / cover;" onclick="play('Cookie Clicker', 'https://phant0ms.netlify.app/game/cookie-clicker')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Cookie Clicker</h1>
+          <p>The original idle game where you bake cookies to rule the universe!</p>
+          <button class="install" onclick="play('Cookie Clicker', https://phant0ms.netlify.app/game/cookie-clicker')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/tunnel-rush.jpg) 0% 0% / cover;" onclick="play('Tunnel Rush', 'https://phant0ms.netlify.app/game/tunnel-rush')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Tunnel Rush</h1>
+          <p>Tunnel Rush is a cool unblocked game that you can play at school. Run the dark tunnel as long as you can and win all levels!</p>
+          <button class="install" onclick="play('Tunnel Rush', 'https://phant0ms.netlify.app/game/tunnel-rush')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/factory-balls.jpg) 0% 0% / cover;" onclick="play('Factory Balls Forever', 'https://phant0ms.netlify.app/game/factoryballsforever')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Factory Balls Forever</h1>
+          <p>Factory Balls Forever is a puzzle game where you have to color the balls correctly!</p>
+          <button class="install" onclick="play('Factory Balls Forever', 'https://phant0ms.netlify.app/game/factoryballsforever')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/fireboy-and-watergirl.jpg) 0% 0% / cover;" onclick="play('Fireboy &amp; Watergirl', 'https://phant0ms.netlify.app/game/fireboy-and-watergirl-forest-temple')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Fireboy &amp; Watergirl</h1>
+          <p>Fireboy And Watergirl is a adventure game where you control two characters to escape a temple.</p>
+          <button class="install" onclick="play('Fireboy &amp; Watergirl', 'https://phant0ms.netlify.app/game/fireboy-and-watergirl-forest-temple')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/flappy-bird.jpg) 0% 0% / cover;" onclick="play('Flappybird', 'https://phant0ms.netlify.app/game/flappybird')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Flappybird</h1>
+          <p>Fly the bird as far as you can without hitting a pipe.</p>
+          <button class="install" onclick="play('Flappybird', 'https://phant0ms.netlify.app/game/flappybird')">Play</button>
+        </div>
+      </div>
+      <div class="game">
+        <div class="img" loading="lazy" style="background: url(https://phant0ms.netlify.app/assets/geometry.jpg) 0% 0% / cover;" onclick="play('Geometrydash', 'https://phant0ms.netlify.app/game/geometry-dash-remastered')">
+          <div class="cover"></div>
+        </div>
+        <div id="game-content" class="game-content">
+          <h1>Geometrydash</h1>
+          <p>Jump and fly your way through danger in this rhythm-based action platformer!</p>
+          <button class="install" onclick="play('Geometrydash', 'https://phant0ms.netlify.app/game/geometry-dash-remastered')">Play</button>
+        </div>
+      </div>
+    <footer id="footer">
+      <main>
+        <hr>
+        <h1>Phantom <span>Games</span>
+        </h1>
+        <h2>Thanks <a href="https://3kh0.github.io">
+            <span class="one">3kh0</span>
+          </a> for lots of game help! </h2>
+        <h2>Subscribe to my <a href="https://youtube.com/@blazerhm">
+            <span class="two">YouTube</span>
+          </a>
+        </h2>
+        <p>© 2022 Phantom. All rights reserved.</p>
+        <p id="display"></p>
+      </main>
+    </footer>
+    <script src="https://phant0ms.netlify.app/script.js"></script>
+  </body>
+</html>
