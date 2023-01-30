@@ -1,6 +1,6 @@
       function recheck() {
   let input = prompt("password required", "");
-  if (input == "127127") {
+  if (input == "9420127") {
   alert("User Verified");
   setTimeout(timer, 9000000);
   } else {
