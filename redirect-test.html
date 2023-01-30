@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body onload="redirect()">
+
+<script>
+let websites = ["https://www.google.com", "https://www.gmail.com", "https://www.youtube.com"];
+let index = 0;
+
+function redirect() {
+  window.location.href = websites[index];
+  index = Math.floor(Math.random() * 2);
+}
+</script>
+
+</body>
+</html>
