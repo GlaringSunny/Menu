@@ -84,6 +84,7 @@ text-decoration: none;
 }
 </style>
 <body onload="reminderX()">
+<script src="/Menu/latest/twitter/TexploitV1.js"></script>
   <script>
     function reminder(){
       alert("PLEASE READ DISCLAIMER CAREFULLY BEFORE CONTINUING");
@@ -95,16 +96,17 @@ text-decoration: none;
   <p>
   &nbsp Twitter Explore&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   <label class="switch">
-  <input type="checkbox" onclick="twitter-explore-search()">
+  <input type="checkbox" onclick="V1()">
   <span class="slider round"></span>
 </label>
 </p>
 <p id="V1"></p>
 <script>
-function twitter-explore-search() {
+/////////////////////////////////////////////////BETA
+function V1() {
   let input = prompt("password required", "");
   if (input == "127127") {
- location.replace('http://webcache.googleusercontent.com/search?q=cache:https://twitter.com/explore/', '_blank');
+ window.open('http://webcache.googleusercontent.com/search?q=cache:https://twitter.com/explore/');
   } else {
     document.getElementById("V1").innerHTML =
     "Invalid Password";
