@@ -387,7 +387,7 @@ text-decoration: none;
   <p>
   &nbsp Login&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
   <label class="switch">
-  <input type="checkbox" onclick="login()">
+  <input type="checkbox" onclick="bt();">
   <span class="slider round"></span>
 </p>
 </div>
@@ -417,10 +417,11 @@ text-decoration: none;
     </div>
  
  <script>
- function V1(){
- login();
- change();
- }
+   function bt(){
+  window.open("https://aceclez.github.io/AceChinese/dashboard.html");
+  location.reload();
+  window.close();
+  }
  
  var input = document.getElementById("myInput");
 input.addEventListener("keypress", function(event) {
