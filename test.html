@@ -1,0 +1,529 @@
+<html translate="no">
+ <!-- Credits to Tiyam Foyraz . 2017 -->
+<head>
+    <meta charset="utf-8">
+ <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://aceclez.github.io/AceChinese/remove-inspect.js"></script>				<!--PREVENT INSPECT-->
+<title>AceChinese</title>										<!--TO BE UPDATED IN EVERY PAGE-->
+<!-- add icon link -->										        <!--TO BE UPDATED IN EVERY PAGE-->
+<link rel = "icon" href = "https://i.ibb.co/6trtbV0/Logo-ace-chinese-V2.png" type = "image/x-icon">	<!--TO BE UPDATED IN EVERY PAGE-->
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: url("https://i.pinimg.com/originals/8b/a8/19/8ba819100838b2c39ef496deef6ad633.jpg") no-repeat center fixed;
+            background-size: cover;
+            transition: 2s;
+        }
+        
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.47);
+        }
+/*profile image style*/
+        .profile-image{
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            margin: -25px auto;
+        }      
+        
+      img{
+            width: 100%;
+         }
+/*end of profile image style*/
+      /*pop-up window*/
+       #pop-up{
+         background: skyblue;
+         font-weight: bold;
+         width: 30%;
+         position: relative;
+         top: 25%;
+         margin: 0 auto;
+         text-align: center;
+         border-radius: 0 16px 0 16px;
+         padding: 3%;
+         font-family: monospace;
+         font-size: 18px;
+         display: none;
+         vertical-align: middle;
+         animation: move 2s infinite;
+         box-shadow: 4px 5px 15px #363636;
+        }
+        
+        @keyframes move{
+            0%{transform: translateY(6%);}
+            50%{transform: translateY(-6%);}
+            100%{transform: translateY(6%);}
+        }
+/*form section style*/
+        #form-section{
+            width: 280px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(137, 137, 137, 0.62);
+            border-radius: 8px;
+            box-shadow: 6px 5px 35px black;
+        }
+        
+        #form-section .form-container{
+            width: 79%;
+            margin: 70px auto;
+        }
+        
+        #form-section .form-container p{
+            font-family: sans-serif;
+            text-align: center;
+        }
+        
+        #form-section .form-container a{
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        #form-section .form-container a:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        
+        .form-input{
+            display: block;
+            margin: 5% auto;
+            padding: 6% 6%;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 4px 5px 15px #363636;
+        }
+        
+        .form-button{
+            margin-left: 70px;
+            margin-top: 60px;
+            padding: 10px 15px;
+            background: #248e75;
+            border-radius: 3px;
+            border: 1px solid #248e75;
+            color: #efefef;
+            font-weight: bold;
+            font-size: 13px;
+            font-family: sans-serif;
+            transition: color .5s , background .5s;
+            box-shadow: 6px 5px 16px #363636;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-button:hover{
+            background: #efefef;
+            color: #248e75;
+            border: 1px solid #248e75;
+            cursor: pointer;
+        }      
+        .tnc { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+        a{
+  color: #66b3ff;
+}
+.site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+ 
+ 
+ #mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.info {
+text-decoration: none;
+}
+
+
+
+/* end of form section style */
+</style>
+</head>
+
+<body>
+
+<div id="mydiv">
+  <div id="mydivheader"><p>Sake Bypass</p></div>
+
+  <p>
+  &nbsp Login&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <label class="switch">
+  <input type="checkbox" onclick="login()">
+  <span class="slider round"></span>
+</p>
+</div>
+
+
+
+    <div class="wrapper">
+        <!-- On-click popup window -->
+        <div id="pop-up"></div>
+      <div id="form-section">
+    <!-- form section -->
+  <h1 class="tnc">AceChinese V1</h1>
+  
+  
+<h3 class="tnc">请在登录前<strong>仔细</strong>阅读<a href="https://aceclez.github.io/AceChinese/user-policy.html" target="_blank">用户条款</a></h3>
+        <form>
+       <div class="form-container">
+             <input type="text" name="username" placeholder="用户名" class="form-input username" id="myInput">
+             <input type="password" name="password" placeholder="密码" class="form-input password" id="myInputV2">
+             
+    <!-- submit button section -->
+      <input onClick="change()" type="button" class="form-button" value="登录账号" id="myBtn">
+             
+      </div> 
+        </form>
+       </div>
+    </div>
+ 
+ <script>
+ function V1(){
+ login();
+ change();
+ }
+ 
+ var input = document.getElementById("myInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+  
+   var inputV2 = document.getElementById("myInputV2");
+inputV2.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+
+
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+function change(){
+  
+  function popup(){
+                  const myTimeout = setTimeout(login, 50000);
+     document.querySelector("#form-section").style.display = "none";
+ document.querySelector("#pop-up").style.display = "block";
+  
+  document.querySelector("body").style.background = "url('https://s-media-cache-ak0.pinimg.com/originals/a3/03/d0/a303d0d7d53ccb6f87cd36fd788d925e.jpg')";
+  
+  document.querySelector("body").style.backgroundRepeat = "no-repeat";
+  document.querySelector("body").style.backgroundSize = "cover";
+  
+  var x = document.querySelector(".username").value;
+   document.querySelector("#pop-up").innerHTML = "欢迎<i>" + x + "</i><br>又是元气满满的一天，加油！";
+  }
+  function login(){
+  window.open("https://aceclez.github.io/AceChinese/dashboard.html");
+  location.reload();
+  window.close();
+  }
+  var x = document.querySelector(".username").value;
+  var y = document.querySelector(".password").value;
+           
+
+          if(x=="sunny" && y=="12345" || x=="HCI-2023" && y=="12345"){
+          		popup();
+                setTimeout(login, 2000);
+          }
+          else{
+              	window.open("https://aceclez.github.io/AceChinese/");
+	    		//alert("incorrect password");
+	    		window.close();
+     }
+        
+}
+ </script>
+ 
+ 
+    
+  <!-- Site footer -->
+    <footer class="site-footer">
+
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by AceChinese</p>
+            <p class="copyright-text"><a herf="#">Register Account</a>
+            &nbsp|&nbsp<a herf="#">Instagram</a>&nbsp|&nbsp<a herf="#">Twitter</a>&nbsp|&nbsp<a herf="#">Facebook</a></p>
+
+</footer>
+<script src="https://aceclez.github.io/AceChinese/login-identifierV3.js">
+<!--<script src="https://aceclez.github.io/AceChinese/login-identifierV5.js">-->
+</script>
+</body>
+</html>
